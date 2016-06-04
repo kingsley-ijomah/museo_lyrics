@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
   has_secure_password
   has_many :songs
 
+  validates :email, presence: true, uniqueness: true
+
   before_save :set_handle
 
   private
