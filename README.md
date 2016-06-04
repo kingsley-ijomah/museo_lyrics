@@ -2,7 +2,7 @@
 
 # This is a full CRUD application using Ruby on Rails.
 
-Museo-Lyrics allows users to search and contribute lyrics to our collection of songs.
+Museo-Lyrics allows users to search and contribute lyrics to our collection of user submitted songs.
 
 Trello: https://trello.com/b/ulwD3wxT/museo-lyrics
 
