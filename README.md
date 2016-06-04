@@ -4,5 +4,5 @@
 
 Museo-Lyrics allows users to search and contribute lyrics to our collection of songs.
 
-Trello: @https://trello.com/b/ulwD3wxT/museo-lyrics
+Trello: https://trello.com/b/ulwD3wxT/museo-lyrics
 
