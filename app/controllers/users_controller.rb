@@ -19,8 +19,7 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    @user.songs
-    @user.likes
+    @songs = Song.where(@user.id)
   end
 
   def edit

@@ -1,7 +1,13 @@
 class SongsController < ApplicationController
   def index
-    @likes = Like.all
-    # @songs = Song.where(:)
+    # @likes = Like.all
+    # @top_songs = Song.where()
+    @songs = Song.all
+    if params[:search]
+      @songs = Song.search(params[:search]).order("created_at DESC")
+    else
+      flash[:notice] = "No results match search"
+    end
   end
 
   def new
