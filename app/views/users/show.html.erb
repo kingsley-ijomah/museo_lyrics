@@ -1,2 +1,16 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<% @songs.each do |s| %>
+  <div id="songs">
+    <ul>
+      <li>Artist: <%= s.artist %></li><br/>
+      <li>Title: <%= s.title %></li><br/>
+      <li>Lyric: <%= s.lyric %></li>
+    </ul>
+  </div>
+<% end %>
+
+<br/>
+
+
+
+<%= link_to "Songs List", users_path %>
+
