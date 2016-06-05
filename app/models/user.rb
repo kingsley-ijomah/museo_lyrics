@@ -7,10 +7,5 @@ class User < ActiveRecord::Base
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true
 
-  before_save :set_handle
 
-  private
-  def set_handle
-    self.handle ||= email
-  end
 end
