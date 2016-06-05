@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
-
+  root 'songs#index'
   resources :sessions, only: [:new, :create, :destroy]
+  resources :users, only: [:new, :create, :show, :edit, :update, :destroy]
+  resources :songs
+
   get '/login', to: 'sessions#new'
   delete '/logout', to: 'sessions#destroy'
 
