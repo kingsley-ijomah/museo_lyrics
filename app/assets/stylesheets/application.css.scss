@@ -23,3 +23,92 @@ div.navbar-header{
   position: relative;
   left: 500px;
 }
+
+h1{
+  color: ghostwhite;
+}
+
+h1.add_song{
+  margin: 0px auto;
+  display: block;
+  position: relative;
+  left: 535px;
+}
+
+.field{
+  color: lightgreen;
+}
+
+#container{
+  display: block;
+  position: relative;
+ left: 100px;
+}
+
+.actions{
+  padding-bottom: 30px;
+}
+
+.text_row{
+  overscroll: auto black;
+}
+
+.greeting{
+  display: block;
+  position: relative;
+  left: -280px;
+  top: 15px;
+}
+
+
+.show_song{
+  display: block;
+  position: relative;
+  left: 15px;
+  color: ghostwhite;
+  margin: 0px auto;
+  width: 350px;
+}
+
+#show_lyric{
+  display: block;
+  position: relative;
+  width: 100px;
+  height: 500px;
+}
+
+.edit_song{
+  display: inline-block;
+  margin-right: 5px;
+  // display: block;
+  // position: relative;
+  // left: 700px;
+  // top: 20px;
+}
+
+.delete_song{
+  display: inline-block;
+  // display: block;
+  // position: relative;
+  // left: 700px;
+  // top: 0px;
+}
+
+#show_links{
+  display: block;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  left: 300px;
+  top: 140px;
+}
+
+#links{
+  display: block;
+  position: relative;
+  width: 80px;
+  height: 40px;
+  left: 90px;
+  top: 0px;
+}
+

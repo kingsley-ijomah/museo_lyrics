@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def index
+    @songs = Song.where(user_id: current_user.id)
   end
 
   def new
@@ -18,11 +19,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user
-    @songs = Song.where(@user.id)
+    @user = User.find(params[:id])
+    # @song = Song.find(song_params)
   end
 
   def edit
+    @user = User.find(params[:id])
   end
 
   def update
@@ -30,7 +32,7 @@ class UsersController < ApplicationController
     @user.update(user_params)
     if @user.save
       flash[:notice] = "Updated Profile"
-      redirect_to user_path(current_user)
+      redirect_to "users/#{@user.id}/songs"
     else
       render 'show'
     end

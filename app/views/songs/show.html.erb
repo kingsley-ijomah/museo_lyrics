@@ -1,5 +1,9 @@
-<% @song do |s| %>
-
-
-
-<% end %>
+<div id="show_links">
+  <%= link_to "Edit Song", edit_song_path, :class => "edit_song" %>
+  <%= link_to "Delete Song", song_path, method: :destroy, :class => "delete_song", data: {confirm: "Delete this song?"} %>
+</div>
+  <p class="show_song">Artist: <%= @song.artist %></p><br/>
+  <p class="show_song">Title: <%= @song.title %></p><br/><br/>
+  <div class="show_lyric">
+    <p class="show_song">Lyrics: <br/><br/><%= @song.lyric %></p>
+  </div>

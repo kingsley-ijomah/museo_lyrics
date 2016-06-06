@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
-<body>
+<body style="background-color: indigo;">
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -19,21 +19,20 @@
     </div>
     <ul class="nav navbar-nav">
       <li style="display:inline-block; left: 630px;"><a href="/">Home</a></li>
-      <li style="display:inline-block; left: 650px;"><a href="/login">Login</a></li>
-      <li style="display:inline-block; left: 670px;"><a href="/sessions/new">Sign Up</a></li>
-      <li style="display:inline-block; left: 690px;"><a href="/songs/new">Add Song</a></li>
+      <% if !current_user %>
+      <li style="display: inline-block; left: 650px;"><a href="/login">Login</a></li>
+      <li style="display: inline-block; left: 670px;"><a href="/users/new">Sign Up</a></li>
+      <li style="display: inline-block; left: 690px;"><a href="/songs/new">Add Song</a></li>
+      <% else %>
+      <li style="display:inline-block; left: 660px;"><%= link_to "Logout", "/logout", method: :delete %></li>
+      <li class="greeting">Hello, <%= current_user.name %></li>
+      <li style="display: inline-block; left: 620px;"><a href="/songs/new">Add Song</a></li>
+      <li style="display: inline-block; left: 640px;"><a href="users/<%= current_user.id %>/edit">Edit User</a></li>
+      <% end %>
+
     </ul>
   </div>
 </nav>
-
-<!-- <div id="" style="display: block; position: relative; width: 300px; height: 80px; margin: 0px auto; padding: 5px; background-color: purple; border: lightgreen solid 3px; border-radius: 3px;">
-  <p style="display: block; position: relative; top: -40px;font-family: sans-serif; font-size: 300%; text-align: top-center; color: ghostwhite; padding: 3px; border: 4px ridge lightgreen; border-radius: 45px; text-shadow: 1px 1px lightgreen;">Museo-Lyrics</p>
-</div> -->
-<!--
-<%= link_to "Home", root_path %>
-<%= link_to "Login", login_path %>
-<%= link_to "Sign Up", new_session_path %>
-<%= link_to "Add Song", new_song_path %> -->
 
 <br/>
 

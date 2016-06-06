@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root 'songs#index'
+  get 'users/index', to: "users#index"
   resources :songs
   resources :users
   resources :sessions, only: [:new, :create, :destroy]

@@ -1,5 +1,8 @@
 class SongsController < ApplicationController
   def index
+    if current_user
+      session[:user_id] = current_user.id
+    end
     # @likes = Like.all
     # @top_songs = Song.where()
     @songs = Song.all
@@ -15,7 +18,7 @@ class SongsController < ApplicationController
   end
 
   def create
-    @song = Song.new(song_params)
+    @song = Song.new(song_params, user_id: session[:user_id])
     if @song.save
       flash[:notice] = "Added Song"
       redirect_to user_path(current_user)
@@ -29,6 +32,7 @@ class SongsController < ApplicationController
   end
 
   def edit
+    @song = Song.find(params[:id])
   end
 
   def update
