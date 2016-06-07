@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MuseoLyrics</title>
+  <title>Museo-Lyrics</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -22,11 +22,10 @@
       <% if !current_user %>
       <li id = "nav_login"><a href="/login">Login</a></li>
       <li id = "nav_signup"><a href="/users/new">Sign Up</a></li>
-      <li id = "nav_add_song_1"><a href="/songs/new">Add Song</a></li>
       <% else %>
       <li id = "nav_logout"><%= link_to "Logout", "/logout", method: :delete %></li>
       <li class="greeting">Hello, <%= current_user.name %></li>
-      <li id = "nav_add_song_2" style=""><a href="/songs/new">Add Song</a></li>
+      <li id = "nav_add_song" style=""><a href="/songs/new">Add Song</a></li>
       <li id = "nav_edit_user"><a href="/users/<%=current_user.id %>/edit">Edit User</a></li>
       <li id = "nav_upload_song"><a href="/users">Uploaded Songs</a></li>
       <li id = "nav_liked_songs"><a href="/users/liked_songs">Liked Songs</a></li>
