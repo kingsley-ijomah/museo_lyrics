@@ -1,6 +1,14 @@
 class UsersController < ApplicationController
+
+
   def index
     @songs = Song.where(user_id: current_user.id)
+  end
+
+  def likes
+    @user = User.find(params[:id])
+    @likes = @user.likes
+    render 'show_likes'
   end
 
   def new
@@ -48,4 +56,5 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
+
 end

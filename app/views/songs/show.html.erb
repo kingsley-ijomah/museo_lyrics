@@ -1,6 +1,20 @@
 <div id="show_links">
-  <%= link_to "Edit Song", edit_song_path, :class => "edit_song" %>
-  <%= link_to "Delete Song", song_path, method: :destroy, :class => "delete_song", data: {confirm: "Delete this song?"} %>
+  <% if current_user == @song.user_id %>
+  <p class="show_likes"><%= @song.likes.count %> Likes</p>
+    <% if current_user.id == @likes.song.user_id %>
+      <% link_to "Unlike Song", song_like_path, :class => "unlike_song" %>
+    <% else %>
+      <%= link_to "Like Song", song_likes_path, :class => "like_song" %>
+      <%= link_to "Edit Song", edit_song_path, :class => "edit_song" %>
+      <%= link_to "Delete Song", song_path, method: :destroy, :class => "delete_song", data: {confirm: "Delete this song?"} %>
+    <% end %>
+  <% elsif current_user && current_user != @song.user_id %>
+    <%= link_to "Like Song", song_likes_path, :class => "like_song" %>
+    <%= link_to "Edit Song", edit_song_path, :class => "edit_song" %>
+    <%= link_to "Delete Song", song_path, method: :destroy, :class => "delete_song", data: {confirm: "Delete this song?"} %>
+  <% else %>
+    <p class="show_likes"><%= @song.likes.count %> Likes</p>
+  <% end %>
 </div>
   <p class="show_song">Artist: <%= @song.artist %></p><br/>
   <p class="show_song">Title: <%= @song.title %></p><br/><br/>

@@ -1,0 +1,5 @@
+<% songs.where(Like.user_id: = songs.user_id).each do |l| %>
+
+  <p><%= l.artist %> - "<%= l.title %>" %></p><br/><br/>
+
+<% end %>

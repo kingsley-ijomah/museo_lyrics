@@ -27,9 +27,14 @@
       <li style="display:inline-block; left: 660px;"><%= link_to "Logout", "/logout", method: :delete %></li>
       <li class="greeting">Hello, <%= current_user.name %></li>
       <li style="display: inline-block; left: 620px;"><a href="/songs/new">Add Song</a></li>
-      <li style="display: inline-block; left: 640px;"><a href="users/<%= current_user.id %>/edit">Edit User</a></li>
+      <ul class ="dropdown-menu" style="display: inline-block; left: 640px;">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Settings</button>
+      <ul class="dropdown-menu">
+        <li><a href="users/<%= current_user.id %>/edit">Edit Profile</a></li>
+        <li><%= link_to "Liked Songs", "users/<%= current_user.id %>/likes" %></li>
+        <li><%= link_to "Uploaded Songs", users_path %></li>
       <% end %>
-
+      </ul>
     </ul>
   </div>
 </nav>

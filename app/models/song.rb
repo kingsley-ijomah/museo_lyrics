@@ -2,7 +2,7 @@ class Song < ActiveRecord::Base
   belongs_to :user
 
   has_many :likes
-  has_many :liking_users, :through => :likes, :source => :user
+  has_many :liked_by, :through => :likes, :source => :user
 
 
   def self.search(search)

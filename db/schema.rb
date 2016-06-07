@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 20160605045630) do
   enable_extension "plpgsql"
 
   create_table "likes", force: :cascade do |t|
-    t.boolean  "like"
     t.integer  "user_id"
     t.integer  "song_id"
     t.datetime "created_at", null: false

@@ -80,18 +80,10 @@ h1.add_song{
 .edit_song{
   display: inline-block;
   margin-right: 5px;
-  // display: block;
-  // position: relative;
-  // left: 700px;
-  // top: 20px;
 }
 
 .delete_song{
   display: inline-block;
-  // display: block;
-  // position: relative;
-  // left: 700px;
-  // top: 0px;
 }
 
 #show_links{
@@ -112,3 +104,27 @@ h1.add_song{
   top: 0px;
 }
 
+#login_form{
+  display: block;
+  position: static;
+  margin: 0px auto;
+  border: solid silver 4px;
+  border-radius: 4px;
+  width: 280px;
+  height: 230px;
+  padding: 15px;
+  background-color: ghostwhite;
+  opacity: 0.25%;
+}
+
+.email_input{
+  margin-left: 29px;
+}
+
+#login_form > div.field{
+  color: black;
+}
+
+.login_button{
+  margin-top: 12px;
+}

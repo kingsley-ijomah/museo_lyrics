@@ -1,3 +1,8 @@
-<% @songs.each do |s| %>
-  <a style="color: ghostwhite" href="/songs/<%= s.id %>"><%= s.artist %> - <%= s.title %></a>
-<% end %>
+<h1 style="margin: 0 auto; padding-bottom: 5px; font-size: 450%; text-align: center;"><u>Uploaded Songs</u></h1>
+<div id="songs_list" style="display: block; position: relative; left: -18px;">
+  <% @songs.reverse.each do |s| %>
+    <ol style="color: ghostwhite; margin: 0 auto; text-align: center;">
+      <a style="color: ghostwhite;" href="/songs/<%= s.id %>"><%= s.artist %> - "<%= s.title %>"</a><br/><br/>
+    </ol>
+  <% end %>
+</div>
