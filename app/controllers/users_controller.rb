@@ -27,8 +27,17 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-    # @song = Song.find(song_params)
+    @user = current_user
+    @songs_array = @user.likes.pluck(:song_id)
+    @songs = @songs_array.reverse
+    @songs_list = Song.where(id: @songs).reverse
+  end
+
+  def liked_songs
+    @user = current_user
+    @songs_array = @user.likes.pluck(:song_id)
+    @songs = @songs_array.reverse
+    @songs_list = Song.where(id: @songs).reverse
   end
 
   def edit

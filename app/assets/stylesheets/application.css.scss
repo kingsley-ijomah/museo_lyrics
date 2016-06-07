@@ -28,6 +28,34 @@ h1{
   color: ghostwhite;
 }
 
+.logo{
+  display: block;
+  position: relative;
+  top: -15px;
+  width: 200px;
+  height: 50px;
+  margin: 0px auto;
+  padding: 5px;
+  background-color: purple;
+  border: lightgreen solid 3px;
+  border-radius: 3px;
+  left: -500px;
+}
+
+.logo_text{
+  display: block;
+  position: relative;
+  top: 0px;
+  font-family: sans-serif;
+  font-size: 150%;
+  text-align: top-center;
+  color: ghostwhite;
+  padding: 3px;
+  border: 4px ridge lightgreen;
+  border-radius: 45px;
+  text-shadow: 1px 1px lightgreen;
+}
+
 h1.add_song{
   margin: 0px auto;
   display: block;
@@ -56,11 +84,54 @@ h1.add_song{
 .greeting{
   display: block;
   position: relative;
-  left: -280px;
+  left: 1200px;
   top: 15px;
 }
 
+#nav_home{
+  display:inline-block;
+  left: 630px;
+}
 
+#nav_login{
+  display: inline-block;
+  left: 650px;
+}
+
+#nav_signup{
+  display: inline-block;
+  left: 670px;
+}
+
+#nav_add_song_1{
+  display: inline-block;
+  left: 690px;
+}
+
+#nav_add_song_2{
+  display: inline-block;
+  left: 620px;
+}
+
+#nav_logout{
+  display:inline-block;
+  left: 660px;
+}
+
+#nav_edit_user{
+  display: inline-block;
+  left: 640px;
+}
+
+#nav_upload_song{
+  display: inline-block;
+  left: 660px;
+}
+
+#nav_liked_songs{
+  display: inline-block;
+  left: 680px;
+}
 .show_song{
   display: block;
   position: relative;
