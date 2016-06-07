@@ -27,7 +27,7 @@
       <li id = "nav_logout"><%= link_to "Logout", "/logout", method: :delete %></li>
       <li class="greeting">Hello, <%= current_user.name %></li>
       <li id = "nav_add_song_2" style=""><a href="/songs/new">Add Song</a></li>
-      <li id = "nav_edit_user"><a href="users/<%= current_user.id %>/edit">Edit User</a></li>
+      <li id = "nav_edit_user"><a href="users/<%=current_user.id %>/edit">Edit User</a></li>
       <li id = "nav_upload_song"><a href="users/index">Uploaded Songs</a></li>
       <li id = "nav_liked_songs"><a href="users/show_likes">Liked Songs</a></li>
       <% end %>

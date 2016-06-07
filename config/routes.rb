@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   root 'songs#index'
   get 'users/index', to: "users#index"
   resources :songs do
@@ -13,7 +12,6 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   get '/login', to: 'sessions#new'
   delete '/logout', to: 'sessions#destroy'
-
   get 'users/liked_songs', to: 'users#liked_songs'
 
 

@@ -9,7 +9,7 @@
       <%= link_to "Delete Song", song_path, method: :destroy, :class => "delete_song", data: {confirm: "Delete this song?"} %>
     <% end %>
   <% elsif current_user && current_user != @song.user_id %>
-    <%= link_to "Like Song", song_likes_path, :class => "like_song" %>
+
     <%= link_to "Edit Song", edit_song_path, :class => "edit_song" %>
     <%= link_to "Delete Song", song_path, method: :destroy, :class => "delete_song", data: {confirm: "Delete this song?"} %>
   <% else %>
