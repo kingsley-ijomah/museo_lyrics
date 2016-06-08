@@ -1,12 +1,12 @@
 <!-- work on index -->
 <!-- incorporate search and top 4 songs by number of likes -->
 <div id="top_songs">
-
+  <h1 style="color: black;">Top 4 of <%= @current_month %></h1>
 </div>
 
 <div id="recent_songs">
-  <h1>Recent Songs</h1>
+  <h1 style="color: black;">Recent Songs</h1>
   <% @songs.reverse.each do |s| %>
-    <a style="color: ghostwhite;" href="/songs/<%= s.id %>"><%= s.artist %> - "<%= s.title %>" <span><%= s.likes.count %> Likes</span><br/><br/>
+    <a style="color: black;" href="/songs/<%= s.id %>"><%= s.artist %> - "<%= s.title %>" <span><%= s.likes.count %> Likes</span><br/><br/>
   <% end %>
 </div>

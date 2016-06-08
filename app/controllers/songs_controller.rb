@@ -2,6 +2,7 @@ class SongsController < ApplicationController
   def index
     # @likes = Like.all
     # @top_songs = Song.where()
+    @current_month = Time.now.strftime("%B")
     @songs = Song.all
     if params[:search]
       @songs = Song.search(params[:search]).order("created_at DESC")

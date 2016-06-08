@@ -9,13 +9,17 @@
       <%= link_to "Delete Song", song_path, method: :destroy, :class => "delete_song", data: {confirm: "Delete this song?"} %>
     <% end %>
     <% else %>
-</div>
-    <p class="show_likes" style="color: ghostwhite;"><%= @song.likes.count %> Likes</p>
+    <div id="show_user_options">
+      <p class="show_likes"><%= @song.likes.count %> Likes</p>
+      <%= link_to "Edit Song", edit_song_path, :class => "edit_song" %>
+      <%= link_to "Delete Song", song_path, method: :destroy, :class => "delete_song", data: {confirm: "Delete this song?"} %>
+    </div>
   <% end %>
   <p class="show_song">Artist: <%= @song.artist %></p><br/>
   <p class="show_song">Title: <%= @song.title %></p><br/><br/>
   <div class="show_lyric">
     <p class="show_song">Lyrics: <br/><br/><%= @song.lyric %></p>
+  </div>
   </div>
 
 
@@ -23,4 +27,6 @@
 # display like count and option to unlike
 # which will decrease like count by one
 
-# if a user
+# if a user is logged in as user who submitted song then
+# allow them to edit and delete their input
+# fix logic here
