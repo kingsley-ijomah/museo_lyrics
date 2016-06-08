@@ -18,11 +18,12 @@
       </a>
     </div>
     <ul class="nav navbar-nav">
-      <li id = "nav_home"><a href="/">Home</a></li>
       <% if !current_user %>
+      <li id = "nav_home"><a href="/">Home</a></li>
       <li id = "nav_login"><a href="/login">Login</a></li>
       <li id = "nav_signup"><a href="/users/new">Sign Up</a></li>
       <% else %>
+      <li id = "nav_home_2"><a href="/">Home</a></li>
       <li id = "nav_logout"><%= link_to "Logout", "/logout", method: :delete %></li>
       <li class="greeting">Hello, <%= current_user.name %></li>
       <li id = "nav_add_song" style=""><a href="/songs/new">Add Song</a></li>

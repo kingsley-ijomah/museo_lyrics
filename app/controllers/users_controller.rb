@@ -37,7 +37,7 @@ class UsersController < ApplicationController
     @user = current_user
     @songs_array = @user.likes.pluck(:song_id)
     @songs = @songs_array.reverse
-    @songs_list = Song.where(id: @songs).reverse
+    @songs_list = Song.where(id: @songs).select(['artist', 'title']).reverse
   end
 
   def edit
@@ -67,3 +67,7 @@ class UsersController < ApplicationController
   end
 
 end
+
+
+
+

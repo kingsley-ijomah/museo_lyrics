@@ -93,6 +93,13 @@ h1.add_song{
   left: 1130px;
 }
 
+#nav_home_2{
+  display: block;
+  position: relative;
+  left: 650px;
+
+}
+
 #nav_login{
   display: inline-block;
   left: 1150px;
@@ -135,6 +142,16 @@ h1.add_song{
   color: ghostwhite;
   margin: 0px auto;
   width: 350px;
+}
+
+.show_likes{
+  display: block;
+  position: relative;
+  margin: 0px auto;
+  left: 695px;
+  padding-bottom: 5px;
+  color: ghostwhite;
+
 }
 
 #show_lyric{
@@ -195,3 +212,19 @@ h1.add_song{
 .login_button{
   margin-top: 12px;
 }
+
+#liked_songs{
+  display: block;
+  position: static;
+  margin: 0px auto;
+  border: solid silver 4px;
+  border-radius: 4px;
+  width: 550px;
+  height: auto;
+  padding: 20px;
+  background-color: ghostwhite;
+  opacity: 0.25%;
+}
+
+
+
