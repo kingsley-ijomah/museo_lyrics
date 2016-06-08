@@ -7,11 +7,7 @@ class User < ActiveRecord::Base
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true
 
-  private
-  def likes? song
-    self.likes.includes?(song)
+  def likes?(song)
+    !(self.likes.find_by song: song).nil?
   end
-
-  #checks to see if song being passed is liked by user
-
 end

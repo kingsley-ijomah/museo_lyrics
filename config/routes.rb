@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root 'songs#index'
   resources :songs do
-    resources :likes, only: [:create, :destroy]
+    resources :likes, only: [:create]
+    member do
+      delete :likes, to: 'likes#destroy'
+    end
   end
 
   resources :users do

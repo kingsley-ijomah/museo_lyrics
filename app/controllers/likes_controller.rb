@@ -10,11 +10,14 @@ class LikesController < ApplicationController
 
   def destroy
     @song = Song.find(params[:id])
-    @user = current_user
-    @likes = Like.all
-    @like = @likes.where('user_id = ?', @user.id)
-    @my_like = @like.where(song_id: @song.id)
-    @my_like.destroy(params[:id])
+    @likes = Like.where(
+      'user_id = :user_id AND song_id = :song_id',
+      user_id: current_user.id,
+      song_id: @song.id
+    )
+
+    @likes.destroy_all
+    redirect_to song_path(@song)
   end
 
   #ask ezra to demonstrate how to create in the view
