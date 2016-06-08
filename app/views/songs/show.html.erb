@@ -1,19 +1,28 @@
-<div id="show_links">
-  <p class="show_song">Artist: <%= @song.artist %></p>
-  <br/>
-  <p class="show_song">Title: <%= @song.title %></p>
-  <br/>
-  <br/>
-  <div class="show_lyric">
-    <p class="show_song">
-      Lyrics:
+<div class="container-fluid song-color">
+  <div class="row">
+
+    <div id="show_likes" class="col-md-2 col-md-offset-2">
+      <h3><%= @song.likes.count %> <%= "Like".pluralize(@song.likes.count) %></h3>
+    </div>
+
+    <div id="show_links" class="col-md-4">
+      <p class="">Artist: <%= @song.artist %></p>
+      <br/>
+      <p class="">Title: <%= @song.title %></p>
       <br/>
       <br/>
-      <pre><%= @song.lyric %></pre>
-    </p>
+      <div class="show_lyric">
+        <p class="">
+          Lyrics:
+          <br/>
+          <br/>
+          <pre><%= @song.lyric %></pre>
+        </p>
+      </div>
+    </div>
+
   </div>
 </div>
-
 
 <!--
   if a user has liked this song then
