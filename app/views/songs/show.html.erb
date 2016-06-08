@@ -3,6 +3,18 @@
 
     <div id="show_likes" class="col-md-2 col-md-offset-2">
       <h3><%= @song.likes.count %> <%= "Like".pluralize(@song.likes.count) %></h3>
+
+      <% if @song.user == current_user %>
+        <p>
+          <%= link_to "Edit", edit_song_path %> |
+          <%= link_to(
+            "Destroy",
+            song_path,
+            method: :destroy,
+            data: {confirm: "Are you sure?"}
+          ) %>
+        </p>
+      <% end %>
     </div>
 
     <div id="show_links" class="col-md-4">
