@@ -163,12 +163,19 @@ h1.add_song{
 }
 
 #show_links{
-  display: block;
-  position: relative;
-  width: 150px;
-  height: 40px;
-  left: 300px;
-  top: 140px;
+//   display: block;
+//   position: relative;
+  width: 500px;
+//   height: 40px;
+//   left: 300px;
+//   top: 140px;
+  margin: 0 auto;
+}
+
+#show_links pre {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  word-wrap: break-word;
 }
 
 #links{
@@ -269,4 +276,18 @@ h1.add_song{
   position: relative;
   padding-bottom: 5px;
   color: black;
+}
+
+
+#edit_user{
+  display: block;
+  position: static;
+  margin: 0px auto;
+  border: solid silver 4px;
+  border-radius: 4px;
+  width: 380px;
+  height: 285px;
+  padding: 15px;
+  background-color: ghostwhite;
+  opacity: 0.25%;
 }

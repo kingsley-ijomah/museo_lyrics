@@ -1,32 +1,29 @@
 <div id="show_links">
-  <% if current_user == @song.user_id %>
-  <p class="show_likes"><%= @song.likes.count %> Likes</p>
-    <% if current_user.id == @likes.song.user_id %>
-      <% link_to "Unlike Song", song_like_path, :class => "unlike_song", method: :destroy %>
-    <% else %>
-      <%= link_to "Like Song", song_likes_path, :class => "like_song" %>
-      <%= link_to "Edit Song", edit_song_path, :class => "edit_song" %>
-      <%= link_to "Delete Song", song_path, method: :destroy, :class => "delete_song", data: {confirm: "Delete this song?"} %>
-    <% end %>
-    <% else %>
-    <div id="show_user_options">
-      <p class="show_likes"><%= @song.likes.count %> Likes</p>
-      <%= link_to "Edit Song", edit_song_path, :class => "edit_song" %>
-      <%= link_to "Delete Song", song_path, method: :destroy, :class => "delete_song", data: {confirm: "Delete this song?"} %>
-    </div>
-  <% end %>
-  <p class="show_song">Artist: <%= @song.artist %></p><br/>
-  <p class="show_song">Title: <%= @song.title %></p><br/><br/>
+  <p class="show_song">Artist: <%= @song.artist %></p>
+  <br/>
+  <p class="show_song">Title: <%= @song.title %></p>
+  <br/>
+  <br/>
   <div class="show_lyric">
-    <p class="show_song">Lyrics: <br/><br/><%= @song.lyric %></p>
+    <p class="show_song">
+      Lyrics:
+      <br/>
+      <br/>
+      <pre><%= @song.lyric %></pre>
+    </p>
   </div>
-  </div>
+</div>
 
 
-# if a user has liked this song then
-# display like count and option to unlike
-# which will decrease like count by one
+<!--
+  if a user has liked this song then
+  display like count and option to unlike
+  which will decrease like count by one
 
-# if a user is logged in as user who submitted song then
-# allow them to edit and delete their input
-# fix logic here
+  if a user is logged in as user who submitted song then
+  allow them to edit and delete their input
+  fix logic here
+
+
+  work on search functionality
+-->
