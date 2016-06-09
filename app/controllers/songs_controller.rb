@@ -3,6 +3,8 @@ class SongsController < ApplicationController
     # @likes = Like.all
     # @top_songs = Song.where()
     @current_month = Time.now.strftime("%B")
+    most_liked = Song.joins(:likes).group(:song_id).order('count_song_id DESC').limit(4).count(:song_id).keys
+    @top_songs = Song.find(most_liked)
     @songs = Song.all
     if params[:search]
       @songs = Song.search(params[:search]).order("created_at DESC")

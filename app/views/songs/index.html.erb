@@ -1,13 +1,21 @@
 <!-- work on index -->
 <!-- incorporate search and top 4 songs by number of likes -->
+<br/>
+<br/>
 <div id="top_songs">
-  <h1 style="color: black;">Top 4 of <%= @current_month %></h1>
-
+  <h1 style="color: black;"><u>Top 4 of <%= @current_month %></u></h1>
+  <div id="artists" style="text-align: ">
+    <% if @top_songs %>
+      <% @top_songs.each do |a| %>
+        <a style="color: black;" href="/songs/<%= a.id %>"><%= a.artist %>-"<%= a.title %>" <span><% if a.likes.count > 0 %><% if a.likes.count == 1 %><%= a.likes.count %> Like<% else %><%= a.likes.count %> Likes<% end %><% end %></span></a><br/><br/>
+      <% end %>
+    <% end %>
+  </div>
 </div>
 
 <div id="recent_songs">
-  <h1 style="color: black;">Recent Songs</h1>
+  <h1 style="color: black;"><u>Recent Songs</u></h1>
   <% @songs.reverse.each do |s| %>
-    <a style="color: black;" href="/songs/<%= s.id %>"><%= s.artist %> - "<%= s.title %>" <span><%= s.likes.count %> Likes</span><br/><br/>
+    <a style="color: black;" href="/songs/<%= s.id %>"><%= s.artist %> - "<%= s.title %>" <span><% if s.likes.count > 0 %><% if s.likes.count == 1 %><%= s.likes.count %> Like<% else %><%= s.likes.count %> Likes<% end %><% end %></span><br/><br/>
   <% end %>
 </div>

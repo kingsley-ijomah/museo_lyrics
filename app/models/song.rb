@@ -6,7 +6,11 @@ class Song < ActiveRecord::Base
 
 
   def self.search(search)
-    where("artist LIKE ?", "%#{search}")
-    where("title LIKE ?", "%#{search}")
+    wildcarded_query = "%#{search}%"
+    where(
+      "artist ILIKE :artist OR title ILIKE :title"
+      artist: wildcarded_query
+      title: wildcarded_query
+    )
   end
 end
