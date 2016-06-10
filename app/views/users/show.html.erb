@@ -1,7 +1,10 @@
-<h1 style="display: block;position:relative;margin: 0px auto; text-align: center; padding-bottom: 5px;">Liked Songs</h1>
+<br/>
+<br/>
+<br/>
+<h1 style="display: block;position:relative;margin: 0px auto; text-align: center; padding-bottom: 5px;"><u>Liked Songs</u></h1>
+<br/>
 <div id="liked_songs">
   <% @songs_list.reverse.each do |l| %>
-
     <a href="/songs/<%= l.id %>" style="color: black"><%= l.artist %> - "<%= l.title %>" <%= l.likes.count %> <% if l.likes.count == 1 %>Like<% else %>Likes<% end %></a>
     <!-- add a link to like and unlike -->
     <br/>

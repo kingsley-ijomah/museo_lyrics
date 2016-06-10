@@ -1,5 +1,12 @@
-<!-- work on index -->
-<!-- incorporate search and top 4 songs by number of likes -->
+<section class="form-container align-center">
+      <%= bootstrap_form_tag song: songs_path, method: :get do |f| %>
+      <%= f.text_field :search, placeholder: "Search songs",
+                       hide_label: true, value: params[:search],
+                       autofocus: true, wrapper: {class: "float-left"} %>
+      <%= link_to "Clear", songs_path, class: "btn btn-primary" %>
+      <br style="clear: both;">
+      <% end %>
+</section>
 <br/>
 <br/>
 <div id="top_songs">
@@ -12,10 +19,16 @@
     <% end %>
   </div>
 </div>
-
 <div id="recent_songs">
+  <% if params[:search] %>
+    <h1 style="color: black;"><u>Search Results for "<%= params[:search] %>"</u></h1>
+    <% @songs.reverse.each do |s| %>
+      <a style="color: black;" href="/songs/<%= s.id %>"><%= s.artist %> - "<%= s.title %>" <span><% if s.likes.count > 0 %><% if s.likes.count == 1 %><%= s.likes.count %> Like<% else %><%= s.likes.count %> Likes<% end %><% end %></span><br/><br/>
+    <% end %>
+  <% else %>
   <h1 style="color: black;"><u>Recent Songs</u></h1>
-  <% @songs.reverse.each do |s| %>
-    <a style="color: black;" href="/songs/<%= s.id %>"><%= s.artist %> - "<%= s.title %>" <span><% if s.likes.count > 0 %><% if s.likes.count == 1 %><%= s.likes.count %> Like<% else %><%= s.likes.count %> Likes<% end %><% end %></span><br/><br/>
+    <% @songs.reverse.each do |s| %>
+      <a style="color: black;" href="/songs/<%= s.id %>"><%= s.artist %> - "<%= s.title %>" <span><% if s.likes.count > 0 %><% if s.likes.count == 1 %><%= s.likes.count %> Like<% else %><%= s.likes.count %> Likes<% end %><% end %></span><br/><br/>
+    <% end %>
   <% end %>
 </div>

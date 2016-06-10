@@ -3,11 +3,12 @@
 
     <div id="show_likes" class="col-md-2 col-md-offset-2">
       <h3><%= @song.likes.count %> <%= "Like".pluralize(@song.likes.count) %></h3>
-
-      <% if current_user.likes?(@song) %>
-        <h4><%= button_to "UNLIKE", likes_song_path(@song), method: :delete %></h4>
-      <% else %>
-        <h4><%= button_to "LIKE", song_likes_path(@song) %></h4>
+      <% if current_user %>
+        <% if current_user.likes?(@song) %>
+          <h4><%= button_to "UNLIKE", likes_song_path(@song), method: :delete %></h4>
+        <% else %>
+          <h4><%= button_to "LIKE", song_likes_path(@song) %></h4>
+        <% end %>
       <% end %>
 
       <% if @song.user == current_user %>
@@ -41,16 +42,3 @@
 
   </div>
 </div>
-
-<!--
-  if a user has liked this song then
-  display like count and option to unlike
-  which will decrease like count by one
-
-  if a user is logged in as user who submitted song then
-  allow them to edit and delete their input
-  fix logic here
-
-
-  work on search functionality
--->

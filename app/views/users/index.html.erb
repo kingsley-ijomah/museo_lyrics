@@ -1,8 +1,11 @@
-<h1 style="margin: 0 auto; padding-bottom: 5px; font-size: 450%; text-align: center;"><u>Uploaded Songs</u></h1>
-<div id="songs_list" style="display: block; position: relative; left: -18px;">
-  <% @songs.reverse.each do |s| %>
-    <ol style="color: ghostwhite; margin: 0 auto; text-align: center;">
-      <a style="color: ghostwhite;" href="/songs/<%= s.id %>"><%= s.artist %> - "<%= s.title %>"</a><br/><br/>
-    </ol>
+<br/>
+<br/>
+<br/>
+<h1 style="display: block;position:relative;margin: 0px auto; text-align: center; padding-bottom: 5px;"><u>Uploaded Songs</u></h1>
+<br/>
+<div id="uploaded_songs">
+  <% @songs.reverse.each do |l| %>
+    <a href="/songs/<%= l.id %>" style="color: black"><%= l.artist %> - "<%= l.title %>" <%= l.likes.count %> <% if l.likes.count == 1 %>Like<% else %>Likes<% end %></a>
+    <br/>
   <% end %>
 </div>

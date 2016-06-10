@@ -1,44 +1,45 @@
-<strong><u style="color: ghostwhite;"><h1 class="add_song">Add Song</h1></u></strong>
-<%= form_for @song do |f| %>
-  <% if @song.errors.any? %>
-    <div class="error_messages">
-      <h2>Form is invalid</h2>
-      <ul>
-        <% for message in @song.errors.full_messages %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+  <strong><u style="display: block; position: relative; margin: 0px auto; color: ghostwhite;"><h1 class="add_song">Add Song</h1></u></strong><br/>
+  <%= form_for @song do |f| %>
+    <% if @song.errors.any? %>
+      <div class="error_messages">
+        <h2>Form is invalid</h2>
+        <ul>
+          <% for message in @song.errors.full_messages %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  <div id="add_new_song">
+    <div id="container">
+     <div class="field">
+     <div class="row">
+      <%= f.label :artist %>
+     </div>
+     <div class="text_row">
+      <%= f.text_field :artist, :class => "artist_field" %>
+     </div>
+     <br/>
+    </div>
+    <div class="field">
+     <div class="row">
+      <%= f.label :title %>
+     </div>
+     <div class="text_row">
+      <%= f.text_field :title, :class => "title_field" %>
+     </div>
+     <br/>
+    </div>
+    <div class="field">
+    <div class="row">
+      <%= f.label :lyrics %>
+    </div>
+    <div class="text_row">
+      <%= f.text_area :lyric, :rows => 20, :cols => 70, :class => "lyric_field"%>
+    </div>
+    </div>
+    <div class="actions"><%= f.submit %></div>
     </div>
   <% end %>
-  <div id="container">
-   <div class="field">
-   <div class="row">
-    <%= f.label :artist %>
-   </div>
-   <div class="text_row">
-    <%= f.text_field :artist %>
-   </div>
-   <br/>
-  </div>
-  <div class="field">
-   <div class="row">
-    <%= f.label :title %>
-   </div>
-   <div class="text_row">
-    <%= f.text_field :title %>
-   </div>
-   <br/>
-  </div>
-  <div class="field">
-  <div class="row">
-    <%= f.label :lyrics %>
-  </div>
-  <div class="text_row">
-    <%= f.text_area :lyric, :rows => 20, :cols => 70%>
-  </div>
-  </div>
-  <div class="actions"><%= f.submit %></div>
-  </div>
-<% end %>
-
+</div>
 <!-- doesn't attatch user_id to song upon creation by user -->

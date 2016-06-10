@@ -9,6 +9,7 @@ class SongsController < ApplicationController
     if params[:search]
       @songs = Song.search(params[:search]).order("created_at DESC")
     else
+      @songs = Song.all
       flash[:notice] = "No results match search"
     end
   end
