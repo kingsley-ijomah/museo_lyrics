@@ -14,19 +14,19 @@ Planning: https://trello.com/b/ulwD3wxT/museo-lyrics
 
 # Design
 
-![url](https://serene-anchorage-98234.herokuapp.com/)
+!url(https://serene-anchorage-98234.herokuapp.com/)
 
-![url](https://serene-anchorage-98234.herokuapp.com/users)
+!url(https://serene-anchorage-98234.herokuapp.com/users)
 
-![url](https://serene-anchorage-98234.herokuapp.com/users/liked_songs)
+!url(https://serene-anchorage-98234.herokuapp.com/users/liked_songs)
 
-![url](https://serene-anchorage-98234.herokuapp.com/songs/new)
+!url(https://serene-anchorage-98234.herokuapp.com/songs/new)
 
-![url](https://serene-anchorage-98234.herokuapp.com/users/5/edit)
+!url(https://serene-anchorage-98234.herokuapp.com/users/5/edit)
 
-![url](https://serene-anchorage-98234.herokuapp.com/login)
+!url(https://serene-anchorage-98234.herokuapp.com/login)
 
-![url](https://serene-anchorage-98234.herokuapp.com/users/new)
+!url(https://serene-anchorage-98234.herokuapp.com/users/new)
 
 
 
