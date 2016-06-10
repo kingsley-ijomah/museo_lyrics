@@ -14,25 +14,25 @@ Planning: https://trello.com/b/ulwD3wxT/museo-lyrics
 
 # Design
 
-    ![alt tag](https://serene-anchorage-98234.herokuapp.com/)
+![alt tag](https://serene-anchorage-98234.herokuapp.com/)
 
-    ![alt tag](https://serene-anchorage-98234.herokuapp.com/users)
+![alt tag](https://serene-anchorage-98234.herokuapp.com/users)
 
-    ![alt tag](https://serene-anchorage-98234.herokuapp.com/users/liked_songs)
+![alt tag](https://serene-anchorage-98234.herokuapp.com/users/liked_songs)
 
-    ![alt tag](https://serene-anchorage-98234.herokuapp.com/songs/new)
+![alt tag](https://serene-anchorage-98234.herokuapp.com/songs/new)
 
-    ![alt tag](https://serene-anchorage-98234.herokuapp.com/users/5/edit)
+![alt tag](https://serene-anchorage-98234.herokuapp.com/users/5/edit)
 
-    ![alt tag](https://serene-anchorage-98234.herokuapp.com/login)
+![alt tag](https://serene-anchorage-98234.herokuapp.com/login)
 
-    ![alt tag](https://serene-anchorage-98234.herokuapp.com/users/new)
+![alt tag](https://serene-anchorage-98234.herokuapp.com/users/new)
 
 
 
 # Get Started
     
-    Deployed via Heroku: https://serene-anchorage-98234.herokuapp.com/
+Deployed via Heroku: https://serene-anchorage-98234.herokuapp.com/
 
 
 # Future Features/Next Steps
