@@ -27,7 +27,7 @@
     <% end %>
   <% else %>
   <h1 style="color: black;"><u>Recent Songs</u></h1>
-    <% @songs.reverse.each do |s| %>
+    <% @songs.last(10).reverse.each do |s| %>
       <a style="color: black;" href="/songs/<%= s.id %>"><%= s.artist %> - "<%= s.title %>" <span><% if s.likes.count > 0 %><% if s.likes.count == 1 %><%= s.likes.count %> Like<% else %><%= s.likes.count %> Likes<% end %><% end %></span><br/><br/>
     <% end %>
   <% end %>

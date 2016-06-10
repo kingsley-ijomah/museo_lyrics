@@ -364,28 +364,28 @@ h1.add_song{
 .name_input_new_user{
   display: block;
   position: relative;
-  left: 160px;
+  left: 190px;
   top: -25px
 }
 
 .email_input_new_user{
   display: block;
   position: relative;
-  left: 160px;
+  left: 190px;
   top: -25px
 }
 
 .password_input_new_user{
   display: block;
   position: relative;
-  left: 160px;
+  left: 190px;
   top: -25px
 }
 
 .password_confirmation_input_new_user{
   display: block;
   position: relative;
-  left: 160px;
+  left: 190px;
   top: -25px;
 }
 
@@ -394,4 +394,19 @@ h1.add_song{
   position: relative;
   top: 20px;
   left: 160px;
+}
+
+@media only screen and (max-device-width: 480px){
+  #add_new_user{
+    display: block;
+  position: static;
+  margin: 0px auto;
+  border: solid silver 4px;
+  border-radius: 4px;
+  width: 410px;
+  height: auto;
+  padding: 20px;
+  background-color: ghostwhite;
+  opacity: 0.25%;
+  }
 }

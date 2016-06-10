@@ -5,9 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-User.delete_all
-Song.delete_all
 Like.delete_all
+Song.delete_all
+User.delete_all
 
 alex = User.new(name: "Alex", email: "aleksanyanalek@gmail.com", password: "hello123", password_confirmation: "hello123")
 jilbert = User.new(name: "Jilbert", email: "jil@gmail.com", password: "abc123", password_confirmation: "abc123")
@@ -161,7 +161,8 @@ Yeah! (Keep it rolling)
 touch_the_sky.save
 
 
-
+Like.create(user_id: alex.id, song_id: touch_the_sky.id)
+Like.create(user_id: jilbert.id, song_id: smooth_operator.id)
 
 puts alex.errors.full_messages
 puts jilbert.errors.full_messages
