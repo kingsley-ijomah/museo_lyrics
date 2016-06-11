@@ -24,7 +24,7 @@ class SongsController < ApplicationController
     if @song.save
       current_user.songs << @song
       flash[:notice] = "Added Song"
-      redirect_to user_path(current_user)
+      redirect_to song_path(@song.id)
     else
       render 'new'
     end
