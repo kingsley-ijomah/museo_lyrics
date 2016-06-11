@@ -11,7 +11,7 @@
         <% end %>
       <% end %>
 
-      <% if @song.user == current_user %>
+      <% if current_user && @song.user == current_user %>
         <p>
           <%= link_to "Edit", edit_song_path %> |
           <%= link_to(
