@@ -5,9 +5,9 @@
       <h3><%= @song.likes.count %> <%= "Like".pluralize(@song.likes.count) %></h3>
       <% if current_user %>
         <% if current_user.likes?(@song) %>
-          <h4><%= button_to "UNLIKE", likes_song_path(@song), method: :delete %></h4>
+          <h4 style="color: lightgreen;"><%= button_to "UNLIKE", likes_song_path(@song), method: :delete %></h4>
         <% else %>
-          <h4><%= button_to "LIKE", song_likes_path(@song) %></h4>
+          <h4 style="color: lightgreen;"><%= button_to "LIKE", song_likes_path(@song) %></h4>
         <% end %>
       <% end %>
 

@@ -1,7 +1,7 @@
 class SongsController < ApplicationController
+  #before_action :authorize
+
   def index
-    # @likes = Like.all
-    # @top_songs = Song.where()
     @current_month = Time.now.strftime("%B")
     most_liked = Song.joins(:likes).group(:song_id).order('count_song_id DESC').limit(4).count(:song_id).keys
     @top_songs = Song.find(most_liked)
@@ -29,8 +29,6 @@ class SongsController < ApplicationController
       render 'new'
     end
   end
-
-  ## don't get entire user object for current_user use only the id
 
   def show
     @song = Song.find(params[:id])

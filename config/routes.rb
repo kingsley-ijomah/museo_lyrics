@@ -7,18 +7,10 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :users do
-    # member do
-    #   get :likes
-    # end
-  end
-
-
+  resources :users
   resources :sessions, only: [:new, :create, :destroy]
   get    '/login',  to: 'sessions#new'
   delete '/logout', to: 'sessions#destroy'
-  # get 'users/liked_songs', to: 'users#liked_songs'
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

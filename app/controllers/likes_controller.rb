@@ -15,15 +15,7 @@ class LikesController < ApplicationController
       user_id: current_user.id,
       song_id: @song.id
     )
-
     @likes.destroy_all
     redirect_to song_path(@song)
   end
-
-  #ask ezra to demonstrate how to create in the view
-  # and then ask for search feature
-  # also create an unlike feature and implement
-  # throughout entire application for logged in users
-
-
 end
