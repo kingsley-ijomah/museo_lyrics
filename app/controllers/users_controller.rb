@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authorize, only: :show
 
 
   def index
@@ -27,7 +28,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user
+    @user = User.find(params[:id])
     @songs_array = @user.likes.pluck(:song_id)
     @songs = @songs_array.reverse
     @songs_list = Song.where(id: @songs).reverse
