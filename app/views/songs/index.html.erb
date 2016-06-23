@@ -32,4 +32,3 @@
       <a style="color: black; font-family: 'Fjalla One', sans-serif;" href="/songs/<%= s.id %>"><%= s.artist %> - "<%= s.title %>" <span><% if s.likes.count > 0 %><% if s.likes.count == 1 %><%= s.likes.count %> Like<% else %><%= s.likes.count %> Likes<% end %><% end %></span><br/><br/>
     <% end %>
 </div>
-<br/>
