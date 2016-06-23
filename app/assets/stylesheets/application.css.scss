@@ -281,7 +281,7 @@ h1.add_song{
 #recent_songs{
   display: block;
   position: relative;
-  top: 100px;
+  top: 80px;
   margin: 0px auto;
   border: solid silver 4px;
   border-radius: 4px;
@@ -290,6 +290,7 @@ h1.add_song{
   padding: 15px;
   background-color: ghostwhite;
   opacity: 0.25%;
+  margin-bottom: 60px;
 }
 
 #top_songs{

@@ -23,15 +23,14 @@
     </div>
     <ul class="nav navbar-nav navbar-brand">
       <% if !current_user %>
-        <li style="font-size: 50%; display: inline-block; font-family: 'Fjalla One', sans-serif;"><a href="/">Home</a></li>
-        <li style="font-size: 50%; display: inline-block; font-family: 'Fjalla One', sans-serif;"><a href="/login">Login</a></li>
-        <li style="font-size: 50%; display: inline-block; font-family: 'Fjalla One', sans-serif;"><a href="/users/new">Sign Up</a></li>
+        <li style="font-size: 70%; display: inline-block; font-family: 'Fjalla One', sans-serif;"><a href="/">Home</a></li>
+        <li style="font-size: 70%; display: inline-block; font-family: 'Fjalla One', sans-serif;"><a href="/login">Login</a></li>
+        <li style="font-size: 70%; display: inline-block; font-family: 'Fjalla One', sans-serif;"><a href="/users/new">Sign Up</a></li>
       <% else %>
-      <li style="font-size: 40%; display: inline-block; font-family: 'Fjalla One', sans-serif;"><a href="/users">Uploaded Songs</a></li>
-      <li style="font-size: 40%; display: inline-block; font-family: 'Fjalla One', sans-serif;"><a href="/users/<%= current_user.id %>">Liked Songs</a></li>
-      <li style="font-size: 40%; display: inline-block; font-family: 'Fjalla One', sans-serif;"><a href="/songs/new">Add Song</a></li>
-      <li style="font-size: 40%; display: inline-block; font-family: 'Fjalla One', sans-serif;"><a href="/users/<%=current_user.id %>/edit">Profile</a></li>
-      <li style="font-size: 40%; display: inline-block; font-family: 'Fjalla One', sans-serif;"><%= link_to "Logout", "/logout", method: :delete %></li>
+        <li style="font-size: 70%; display: inline-block; font-family: 'Fjalla One', sans-serif;"><a href="/users/<%= current_user.id %>">Songs</a></li>
+        <li style="font-size: 70%; display: inline-block; font-family: 'Fjalla One', sans-serif;"><a href="/songs/new">Add Song</a></li>
+        <li style="font-size: 70%; display: inline-block; font-family: 'Fjalla One', sans-serif;"><a href="/users/<%=current_user.id %>/edit">Edit Profile</a></li>
+        <li style="font-size: 70%; display: inline-block; font-family: 'Fjalla One', sans-serif;"><%= link_to "Logout", "/logout", method: :delete %></li>
       <% end %>
     </ul>
   </div>

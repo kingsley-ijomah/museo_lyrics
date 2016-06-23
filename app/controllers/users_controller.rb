@@ -28,6 +28,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @uploaded_songs = Song.where(user_id: current_user.id)
     @user = User.find(params[:id])
     @songs_array = @user.likes.pluck(:song_id)
     @songs = @songs_array.reverse
@@ -42,17 +43,17 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = current_user
+    @user = User.find(params[:id])
   end
 
   def update
-    @user = current_user
+    @user = User.find(params[:id])
     @user.update(user_params)
     if @user.save
       flash[:notice] = "Updated Profile"
-      redirect_to "users/#{@user.id}/songs"
+      redirect_to user_path
     else
-      render 'show'
+      redirect_to edit_user_path
     end
   end
 
