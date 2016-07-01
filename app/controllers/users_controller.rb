@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-  before_action :authorize, only: :show
 
+  before_action :authorize, only: [:show, :edit, :update, :destroy, :logout]
+  before_action :correct_user, only: [:show, :edit, :update, :destroy, :logout]
 
   def index
     @songs = Song.where(user_id: current_user.id)
@@ -66,6 +67,11 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  end
+
+  def correct_user
+    @user = User.find(params[:id])
+    redirect_to(root_path) unless current_user?(@user)
   end
 
 end

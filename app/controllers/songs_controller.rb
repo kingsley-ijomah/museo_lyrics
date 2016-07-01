@@ -1,5 +1,7 @@
 class SongsController < ApplicationController
-  #before_action :authorize
+
+  before_action :authorize, only: [:edit, :new, :create, :update, :destroy, :logout]
+  before_action :correct_user, only: [:edit, :update, :logout]
 
   def index
     @current_month = Time.now.strftime("%B")
@@ -58,5 +60,10 @@ class SongsController < ApplicationController
   private
   def song_params
     params.require(:song).permit(:artist, :title, :lyric, :user_id)
+  end
+
+  def correct_user
+    @User = User.find(params[:id])
+    redirect_to(root_path) unless current_user?(@User)
   end
 end

@@ -10,7 +10,7 @@
 <br/>
 <br/>
 <div id="top_songs">
-   <% if params[:search] %>
+  <% if params[:search] %>
     <h1 style="color: black; font-family: 'Fjalla One', sans-serif;"><u>Search Results for "<%= params[:search] %>"</u></h1>
     <% @songs.reverse.each do |s| %>
       <a style="color: black; font-family: 'Fjalla One', sans-serif;" href="/songs/<%= s.id %>"><%= s.artist %> - "<%= s.title %>" <span><% if s.likes.count > 0 %><% if s.likes.count == 1 %><%= s.likes.count %> Like<% else %><%= s.likes.count %> Likes<% end %><% end %></span><br/><br/>
@@ -24,7 +24,6 @@
       <% end %>
     <% end %>
   </div>
-  <% end %>
 </div>
 <div id="recent_songs">
   <h1 style="color: black; font-family: 'Fjalla One', sans-serif;"><u>Recent Songs</u></h1>
@@ -32,3 +31,4 @@
       <a style="color: black; font-family: 'Fjalla One', sans-serif;" href="/songs/<%= s.id %>"><%= s.artist %> - "<%= s.title %>" <span><% if s.likes.count > 0 %><% if s.likes.count == 1 %><%= s.likes.count %> Like<% else %><%= s.likes.count %> Likes<% end %><% end %></span><br/><br/>
     <% end %>
 </div>
+  <% end %>
