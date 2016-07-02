@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :users
+  resources :users, except: [:index]
   resources :sessions, only: [:new, :create, :destroy]
   get    '/login',  to: 'sessions#new'
   delete '/logout', to: 'sessions#destroy'

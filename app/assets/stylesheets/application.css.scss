@@ -199,7 +199,7 @@ h1.add_song{
   border: solid silver 4px;
   border-radius: 4px;
   width: 280px;
-  height: 245px;
+  height: 275px;
   padding: 15px;
   background-color: ghostwhite;
   opacity: 0.25%;
@@ -215,7 +215,7 @@ h1.add_song{
 
 .login_button{
   display: block;
-  position: relative;
+  position:  static;
   top: 20px;
   left: 160px;
   margin-bottom: 10px;
