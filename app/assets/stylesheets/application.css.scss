@@ -198,7 +198,7 @@ h1.add_song{
   margin: 0px auto;
   border: solid silver 4px;
   border-radius: 4px;
-  width: 280px;
+  width: 350px;
   height: 275px;
   padding: 15px;
   background-color: ghostwhite;
@@ -206,7 +206,14 @@ h1.add_song{
 }
 
 .email_input{
-  margin-left: 29px;
+  // margin-left: 29px;
+  position: relative;
+  left: 55px;
+}
+
+.password_input_login{
+  position: relative;
+  left: 26px;
 }
 
 #login_form > div.field{
@@ -215,7 +222,7 @@ h1.add_song{
 
 .login_button{
   display: block;
-  position:  static;
+  position:  relative;
   top: 20px;
   left: 160px;
   margin-bottom: 10px;
