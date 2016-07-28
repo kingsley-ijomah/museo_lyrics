@@ -1,0 +1,16 @@
+%br/
+%br/
+%br/
+%h1{:style => "display: block;position:relative;margin: 0px auto; text-align: center; padding-bottom: 5px;"}
+  %u Uploaded Songs
+%br/
+#uploaded_songs
+  - @songs.reverse.each do |l|
+    %a{:href => "/songs/#{l.id}", :style => "color: black"}
+      = l.artist
+      \- "#{l.title}" #{l.likes.count}
+      - if l.likes.count == 1
+        Like
+      - else
+        Likes
+    %br/

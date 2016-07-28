@@ -1,0 +1,30 @@
+.container-fluid.song-color
+  .row
+    #show_likes.col-md-2.col-md-offset-2
+      %h3
+        = @song.likes.count
+        = "Like".pluralize(@song.likes.count)
+      - if current_user
+        - if current_user.likes?(@song)
+          %h4{:style => "color: lightgreen;"}= button_to "UNLIKE", likes_song_path(@song), method: :delete
+        - else
+          %h4{:style => "color: lightgreen;"}= button_to "LIKE", song_likes_path(@song)
+      - if current_user && @song.user == current_user
+        %p
+          = link_to "Edit", edit_song_path
+          |
+          \#{link_to( "Destroy", song_path, method: :delete, data: {confirm: "Are you sure?"} )}
+    #show_links.col-md-4
+      %p
+        Artist: #{@song.artist}
+      %br/
+      %p
+        Title: #{@song.title}
+      %br/
+      %br/
+      .show_lyric
+        %p
+          Lyrics:
+          %br/
+          %br/
+        %pre= @song.lyric

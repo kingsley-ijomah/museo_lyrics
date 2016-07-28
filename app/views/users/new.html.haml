@@ -1,0 +1,25 @@
+#add_new_user
+  %h1{:style => "color: lightgreen; margin: 0px auto;"}
+    %u Sign Up
+  %br/
+  = form_for @user do |f|
+    - if @user.errors.any?
+      .error_messages
+        %h2 Form is invalid
+        %ul
+          - for message in @user.errors.full_messages
+            %li= message
+    .field
+      = f.label :name
+      = f.text_field :name, :class => "name_input_new_user"
+    .field
+      = f.label :email
+      = f.text_field :email, :class => "email_input_new_user"
+    .field
+      = f.label :password
+      = f.password_field :password, :class => "password_input_new_user"
+    .field
+      = f.label :password_confirmation
+      = f.password_field :password_confirmation, :class => "password_confirmation_input_new_user"
+    %br/
+    .actions= f.submit

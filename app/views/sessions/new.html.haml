@@ -1,0 +1,12 @@
+#login_form
+  %h1{:style => "color: lightgreen;"}
+    %u Log In Below
+  %p#alert{:style => "color: red;"}= alert
+  = form_tag sessions_path do
+    .field
+      = label_tag :email
+      = text_field_tag :email, params[:email], :class => "email_input"
+    .field
+      = label_tag :password
+      = password_field_tag :password, params[:password],  :class => "password_input_login"
+    .actions= submit_tag "Log In", :class => "login_button"
