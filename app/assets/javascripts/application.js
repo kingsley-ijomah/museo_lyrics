@@ -19,7 +19,23 @@
 
 
 $(document).on('turbolinks:load', function(){
-   $("a").hover(function() { // Mouse over
+  //Fix Styling
+  if(window.location.pathname.indexOf('/songs') >= 0){
+    $("#songs_container").css('background-color', 'indigo');
+    $("#songs_container").css('border', '0px');
+  };
+  $(".btn").hover(function(){ // Mouse over
+    $(this).css('color', 'lightgreen');
+    $(this).css('background-color', "ghostwhite");
+    $(this).stop().fadeTo(300, 0.6);
+    $(this).stop().fadeTo(300, 0.3);
+  }, function(){ // Mouse out
+    $(this).css('color', 'white');
+    $(this).css('background-color', "#337ab7");
+    $(this).stop().fadeTo(300, 1);
+    $(this).stop().fadeTo(300, 1);
+  });
+   $("a:not(.btn)").hover(function() { // Mouse over
     $(this).css('color', 'lightgreen');
     $(this).stop().fadeTo(300, 0.6);
     $(this).stop().fadeTo(300, 0.3);
