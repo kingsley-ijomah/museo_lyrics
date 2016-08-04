@@ -53,7 +53,7 @@
         - @songs.last(10).reverse.each do |s|
           %a#resongs{:href => "/songs/#{s.id}", :style => "color: black; font-family: 'Fjalla One', sans-serif;"}
             = s.artist
-            "\#{s.title}"
+            "#{s.title}"
             %span
               - if s.likes.count > 0
                 - if s.likes.count == 1
