@@ -16,3 +16,16 @@
 //= require bootstrap-sprockets
 //= require bootstrap
 //= require_self
+
+
+$(document).on('turbolinks:load', function(){
+   $("a").hover(function() { // Mouse over
+    $(this).css('color', 'lightgreen');
+    $(this).stop().fadeTo(300, 0.6);
+    $(this).stop().fadeTo(300, 0.3);
+  }, function() { // Mouse out
+    $(this).css('color', 'black');
+    $(this).stop().fadeTo(300, 1);
+    $(this).stop().fadeTo(300, 1);
+  });
+});

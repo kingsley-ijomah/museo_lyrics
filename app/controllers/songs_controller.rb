@@ -1,7 +1,8 @@
 class SongsController < ApplicationController
 
   before_action :authorize, only: [:edit, :new, :create, :update, :destroy, :logout]
-  before_action :correct_user, only: [:edit, :update, :logout]
+  before_action :correct_user, only: [:edit, :update, :destroy, :logout]
+  before_action :check_if_song_belongs_to_current_user, only: [:edit, :update, :destroy]
 
   def index
     @current_month = Time.now.strftime("%B")
@@ -63,7 +64,18 @@ class SongsController < ApplicationController
   end
 
   def correct_user
-    @User = User.find(params[:id])
+    @User = current_user
     redirect_to(root_path) unless current_user?(@User)
+  end
+
+  def check_if_song_belongs_to_current_user
+    @User = current_user
+    @song = Song.find(params[:id])
+    if @song[:user_id] == @User.id
+      true
+    else
+      false
+      redirect_to song_path(@song.id)
+    end
   end
 end

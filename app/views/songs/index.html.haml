@@ -1,10 +1,10 @@
 %section.form-container.align-center
   = bootstrap_form_tag song: songs_path, method: :get do |f|
     = f.text_field :search, placeholder: "Search songs", |
-      hide_label: true, value: params[:search],          |
-      autofocus: true, wrapper: {class: "float-left"}    |
-    = link_to "Clear", songs_path, class: "btn btn-primary"
-    %br{:style => "clear: both;"}/
+    hide_label: true, value: params[:search],          |
+    autofocus: true, wrapper: {class: "float-left"}    |
+  = link_to "Clear", songs_path, class: "btn btn-primary"
+  %br{:style => "clear: both;"}/
 %br/
 %br/
 #top_songs
@@ -15,7 +15,7 @@
     - @songs.reverse.each do |s|
       %a{:href => "/songs/#{s.id}", :style => "color: black; font-family: 'Fjalla One', sans-serif;"}
         = s.artist
-        \- "#{s.title}"
+        "#{s.title}"
         %span
           - if s.likes.count > 0
             - if s.likes.count == 1
@@ -35,7 +35,7 @@
         - @top_songs.each do |a|
           %a{:href => "/songs/#{a.id}", :style => "color: black; font-family: 'Fjalla One', sans-serif;"}
             = a.artist
-            \-"#{a.title}"
+            "#{a.title}"
             %span
               - if a.likes.count > 0
                 - if a.likes.count == 1
@@ -46,20 +46,20 @@
                   Likes
           %br/
           %br/
-#recent_songs
-  %h1{:style => "color: black; font-family: 'Fjalla One', sans-serif;"}
-    %u Recent Songs
-  - @songs.last(10).reverse.each do |s|
-    %a{:href => "/songs/#{s.id}", :style => "color: black; font-family: 'Fjalla One', sans-serif;"}
-      = s.artist
-      \- "#{s.title}"
-      %span
-        - if s.likes.count > 0
-          - if s.likes.count == 1
-            = s.likes.count
-            Like
-          - else
-            = s.likes.count
-            Likes
-      %br/
-      %br/
+    #recent_songs
+      %h1{:style => "color: black; font-family: 'Fjalla One', sans-serif;"}
+        %u Recent Songs
+      - @songs.last(10).reverse.each do |s|
+        %a#resongs{:href => "/songs/#{s.id}", :style => "color: black; font-family: 'Fjalla One', sans-serif;"}
+          = s.artist
+          "#{s.title}"
+          %span
+            - if s.likes.count > 0
+              - if s.likes.count == 1
+                = s.likes.count
+                Like
+              - else
+                = s.likes.count
+                Likes
+          %br/
+          %br/

@@ -293,12 +293,16 @@ h1.add_song{
   border: solid silver 4px;
   border-radius: 4px;
   width: auto;
+  margin-right: -40px;
+  left: -20px;
   height: auto;
   padding: 15px;
+  text-align: center;
   background-color: ghostwhite;
   opacity: 0.25%;
   margin-bottom: 60px;
 }
+
 
 #top_songs{
   display: block;
@@ -308,8 +312,9 @@ h1.add_song{
   border: solid silver 4px;
   border-radius: 4px;
   width: auto;
-  height: auto;
+  height: 270px;
   padding: 15px;
+  text-align: center;
   background-color: ghostwhite;
   opacity: 0.25%;
 }
