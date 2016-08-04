@@ -28,6 +28,7 @@ $(document).on('turbolinks:load', function(){
     $("#songs_container").css('background-color', 'ghostwhite');
     $("#songs_container").css('border', 'solid silver 4px');
   };
+
   $(".btn").hover(function(){ // Mouse over
     $(this).css('color', 'lightgreen');
     $(this).css('background-color', "ghostwhite");
