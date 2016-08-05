@@ -24,11 +24,14 @@ $(document).on('turbolinks:load', function(){
     $("#songs_container").css('background-color', 'indigo');
     $("#songs_container").css('border', '0px');
   };
-  if(window.location.pathname.indexOf('/songs') < 0 || window.location.pathname.indexOf('/') < 0){
-    $("#songs_container").css('background-color', 'ghostwhite');
-    $("#songs_container").css('border', 'solid silver 4px');
-  };
+  $("input").keydown(function(event){
+    if(event.keyCode==13){
+      $("#songs_container").css('background-color', 'ghostwhite');
+      $("#songs_container").css('border', ' silver 4px solid');
+    };
+  });
 
+  // Add Cool Effects For <a> tags
   $(".btn").hover(function(){ // Mouse over
     $(this).css('color', 'lightgreen');
     $(this).css('background-color', "ghostwhite");
