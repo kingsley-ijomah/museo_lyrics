@@ -24,7 +24,7 @@ $(document).on('turbolinks:load', function(){
     $("#songs_container").css('background-color', 'indigo');
     $("#songs_container").css('border', '0px');
   };
-  if(window.location.pathname.indexOf('/songs') <= 0 || window.location.pathname.indexOf('/') <= 0){
+  if(window.location.pathname.indexOf('/songs') < 0 || window.location.pathname.indexOf('/') < 0){
     $("#songs_container").css('background-color', 'ghostwhite');
     $("#songs_container").css('border', 'solid silver 4px');
   };
