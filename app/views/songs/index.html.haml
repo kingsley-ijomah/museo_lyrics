@@ -7,15 +7,15 @@
   %br{:style => "clear: both;"}/
 %br/
 %br/
-#songs_container
-  - if params[:search]
+- if params[:search]
+  #songs_container{:style => "display: block;\n  position: relative;\n  top: 10px;\n  margin: 0px auto;\n  border: solid silver 4px;\n  border-radius: 4px;\n  width: auto;\n  height: auto;\n  padding: 15px;\n  text-align: center;\n  background-color: ghostwhite;\n  opacity: 0.25%;"}
     %h1{:style => "color: black; font-family: 'Fjalla One', sans-serif;"}
       %u
-        Search Results for "#{params[:search]}"
+        Search Results for "\#{params[:search]}"
     - @songs.reverse.each do |s|
       %a{:href => "/songs/#{s.id}", :style => "color: black; font-family: 'Fjalla One', sans-serif;"}
         = s.artist
-        "#{s.title}"
+        "\#{s.title}"
         %span
           - if s.likes.count > 0
             - if s.likes.count == 1
@@ -26,41 +26,41 @@
               Likes
         %br/
         %br/
-  - else
-    #top_songs
-      %h1{:style => "color: black; font-family: 'Fjalla One', sans-serif;"}
-        %u
-          Top 4 of #{@current_month}
-      #artists{:style => "border-radius: 0px;text-align: "}
-        - if @top_songs
-          - @top_songs.each do |a|
-            %a{:href => "/songs/#{a.id}", :style => "color: black; font-family: 'Fjalla One', sans-serif;"}
-              = a.artist
-              "#{a.title}"
-              %span
-                - if a.likes.count > 0
-                  - if a.likes.count == 1
-                    = a.likes.count
-                    Like
-                  - else
-                    = a.likes.count
-                    Likes
-            %br/
-            %br/
-      #recent_songs
-        %h1{:style => "color: black; font-family: 'Fjalla One', sans-serif;"}
-          %u Recent Songs
-        - @songs.last(10).reverse.each do |s|
-          %a#resongs{:href => "/songs/#{s.id}", :style => "color: black; font-family: 'Fjalla One', sans-serif;"}
-            = s.artist
-            "#{s.title}"
+- else
+  #top_songs
+    %h1{:style => "color: black; font-family: 'Fjalla One', sans-serif;"}
+      %u
+        Top 4 of \#{@current_month}
+    #artists{:style => "border-radius: 0px;text-align: "}
+      - if @top_songs
+        - @top_songs.each do |a|
+          %a{:href => "/songs/#{a.id}", :style => "color: black; font-family: 'Fjalla One', sans-serif;"}
+            = a.artist
+            "\#{a.title}"
             %span
-              - if s.likes.count > 0
-                - if s.likes.count == 1
-                  = s.likes.count
+              - if a.likes.count > 0
+                - if a.likes.count == 1
+                  = a.likes.count
                   Like
                 - else
-                  = s.likes.count
+                  = a.likes.count
                   Likes
-            %br/
-            %br/
+          %br/
+          %br/
+    #recent_songs
+      %h1{:style => "color: black; font-family: 'Fjalla One', sans-serif;"}
+        %u Recent Songs
+      - @songs.last(10).reverse.each do |s|
+        %a#resongs{:href => "/songs/#{s.id}", :style => "color: black; font-family: 'Fjalla One', sans-serif;"}
+          = s.artist
+          "\#{s.title}"
+          %span
+            - if s.likes.count > 0
+              - if s.likes.count == 1
+                = s.likes.count
+                Like
+              - else
+                = s.likes.count
+                Likes
+          %br/
+          %br/

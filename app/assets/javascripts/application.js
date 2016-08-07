@@ -31,6 +31,9 @@ $(document).on('turbolinks:load', function(){
     };
   });
 
+  // when on any other page except
+
+
   // Add Cool Effects For <a> tags
   $(".btn").hover(function(){ // Mouse over
     $(this).css('color', 'lightgreen');
