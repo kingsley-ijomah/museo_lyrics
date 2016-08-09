@@ -30,7 +30,7 @@ Planning: https://trello.com/b/ulwD3wxT/museo-lyrics
 
 # Get Started
     
-Deployed via Heroku: https://serene-anchorage-98234.herokuapp.com/
+Deployed via Heroku: https://museo-lyrics.herokuapp.com/
 
 
 # Future Features/Next Steps
