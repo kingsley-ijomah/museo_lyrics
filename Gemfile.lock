@@ -62,6 +62,7 @@ GEM
       activesupport (>= 4.1.0)
     haml (4.0.7)
       tilt
+    hirb (0.7.3)
     hpricot (0.8.6)
     html2haml (2.0.0)
       erubis (~> 2.7.0)
@@ -180,6 +181,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   haml
+  hirb
   hpricot
   html2haml
   jbuilder (~> 2.0)

@@ -31,7 +31,7 @@ gem 'bootstrap_form'
 gem 'bcrypt', '~> 3.1.7'
 
 
-
+gem 'hirb'
 gem 'haml'
 gem 'html2haml'
 gem 'hpricot'
