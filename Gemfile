@@ -34,7 +34,6 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'hirb'
 gem 'haml'
 gem 'html2haml'
-gem 'hpricot'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
