@@ -52,7 +52,7 @@ class UsersController < ApplicationController
     @user.update(user_params)
     if @user.save
       flash[:notice] = "Updated Profile"
-      redirect_to user_path
+      redirect_to songs_path
     else
       redirect_to edit_user_path
     end
