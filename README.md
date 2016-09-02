@@ -32,9 +32,3 @@ Planning: https://trello.com/b/ulwD3wxT/museo-lyrics
     
 Deployed via Heroku: https://museo-lyrics.herokuapp.com/
 
-
-# Future Features/Next Steps
-    
-    - AAU, allow for users to establish and share data within friendships/groups
-
-    - AAU, I would like to see an improved UI/UX (minimize page travel for features)
