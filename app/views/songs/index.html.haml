@@ -31,7 +31,7 @@
     %h1{:style => "color: black; font-family: 'Fjalla One', sans-serif;"}
       %u
         Top 4 of #{@current_month}
-    #artists{:style => "border-radius: 0px;text-align: "}
+    #artists{:style => "border-radius: 0px;}
       - if @top_songs
         - @top_songs.each do |a|
           %a{:href => "/songs/#{a.id}", :style => "color: black; font-family: 'Fjalla One', sans-serif;"}
