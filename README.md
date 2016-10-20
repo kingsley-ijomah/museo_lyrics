@@ -14,19 +14,19 @@ Planning: https://trello.com/b/ulwD3wxT/museo-lyrics
 
 # Design
 
-![screenshot](public/)
+![screenshot](app/assets/images/GuestHomePage.png)
 
-![screenshot](public/)
+![screenshot](app/assets/images/UserHomePage.png)
 
-![screenshot](public/)
+![screenshot](app/assets/images/SongSearchPage.png)
 
-![screenshot](public/)
+![screenshot](app/assets/images/SongShowPage.png)
 
-![screenshot](public/)
+![screenshot](app/assets/images/SongsPage.png)
 
-![screenshot](public/)
+![screenshot](app/assets/images/UsersEditPage.png)
 
-![screenshot](public/)
+![screenshot](app/assets/images/AddSongPage.png)
 
 # Get Started
     

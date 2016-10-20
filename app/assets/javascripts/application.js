@@ -48,4 +48,22 @@ $(document).on('turbolinks:load', function(){
     $(this).stop().fadeTo(300, 1);
     $(this).stop().fadeTo(300, 1);
   });
+   $(".link_to_edit").hover(function(){
+    $(this).css('color', 'white');
+    $(this).stop().fadeTo(300, 0.6);
+    $(this).stop().fadeTo(300, 0.3);
+   }, function(){
+    $(this).css('color', '#428bca');
+    $(this).stop().fadeTo(300, 1);
+    $(this).stop().fadeTo(300, 1);
+   });
+    $(".link_to_destroy").hover(function(){
+    $(this).css('color', 'white');
+    $(this).stop().fadeTo(300, 0.6);
+    $(this).stop().fadeTo(300, 0.3);
+   }, function(){
+    $(this).css('color', '#428bca');
+    $(this).stop().fadeTo(300, 1);
+    $(this).stop().fadeTo(300, 1);
+   });
 });

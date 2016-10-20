@@ -11,9 +11,9 @@
           %h4{:style => "color: lightgreen;"}= button_to "LIKE", song_likes_path(@song)
       - if current_user && @song.user == current_user
         %p
-          = link_to "Edit", edit_song_path
+          = link_to "Edit", edit_song_path, class: "link_to_edit"
           |
-          \#{link_to( "Destroy", song_path, method: :delete, data: {confirm: "Are you sure?"} )}
+          \#{link_to( "Destroy", song_path, method: :delete, data: {confirm: "Are you sure?"}, class: "link_to_destroy" )}
     #show_links.col-md-4
       %p
         Artist: #{@song.artist}

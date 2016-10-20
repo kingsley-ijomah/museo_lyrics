@@ -54,6 +54,8 @@ class SongsController < ApplicationController
 
   def destroy
     @song = Song.find(params[:id])
+    @likes = Like.where('song_id = :song_id', song_id: @song.id)
+    @likes.destroy_all
     @song.destroy
     redirect_to user_path(current_user)
   end
