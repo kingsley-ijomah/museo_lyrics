@@ -24,7 +24,7 @@ Planning: https://trello.com/b/ulwD3wxT/museo-lyrics
 
 ![screenshot](app/assets/images/SongsPage.png)
 
-![screenshot](app/assets/images/UsersEditPage.png)
+![screenshot](app/assets/images/UserEditPage.png)
 
 ![screenshot](app/assets/images/AddSongPage.png)
 
